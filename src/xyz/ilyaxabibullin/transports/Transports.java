@@ -7,25 +7,25 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Transports {
-    ArrayList<Transport>  transportPark = new ArrayList<>();
+    ArrayList<Transport> TransportPark = new ArrayList<>();
 
     public void run() {
         Scanner in = new Scanner(System.in);
-        Transports s = new Transports();
+        Transports transports = new Transports();
         while (true){
             System.out.println("help: \n  add - добавить транспорт \n ls - показать весь транспорт" +
                     " \n exit - выход");
             String userInput = in.nextLine();
             switch(userInput){
                 case("add"):
-                    s.inData(in);
+                    transports.inData(in);
                     break;
                 case("ls"):
-                    if(s.transportPark.size()==0){
+                    if(transports.TransportPark.size()==0){
                         System.out.println("Список пуст. Внесите данные");
                     }else{
                         System.out.println();
-                        s.transportPark.forEach((t)-> t.showInformation());
+                        transports.TransportPark.forEach((t)-> t.showInformation());
                         System.out.println();
                     }
                     break;
@@ -75,7 +75,7 @@ public class Transports {
                 System.out.println("Количество пассажиров");
                 tanker.setPassengerNumber(in.nextInt());
 
-                transportPark.add(tanker);
+                TransportPark.add(tanker);
 
                 tanker.showInformation();
 
@@ -96,7 +96,7 @@ public class Transports {
                 System.out.println("Количество пассажиров");
                 liner.setPassengerNumber(in.nextInt());
 
-                transportPark.add(liner);
+                TransportPark.add(liner);
 
                 break;
             case("Вертолет"): case("3"):
@@ -113,7 +113,7 @@ public class Transports {
                 System.out.println("Количество пассажиров");
                 helicopter.setPassengerNumber(in.nextInt());
 
-                transportPark.add(helicopter);
+                TransportPark.add(helicopter);
                 break;
             case("Самолет"): case("4"):
                 System.out.println("Выбран самолет");
@@ -130,7 +130,7 @@ public class Transports {
                 System.out.println("Количество пассажиров");
                 aircraft.setPassengerNumber(in.nextInt());
 
-                transportPark.add(aircraft);
+                TransportPark.add(aircraft);
 
                 break;
             case("Железнодорожный состав"): case("5"):
@@ -152,7 +152,7 @@ public class Transports {
                 System.out.println("Количество пассажиров");
                 train.setPassengerNumber(in.nextInt());
 
-                transportPark.add(train);
+                TransportPark.add(train);
 
                 break;
             case ("Грузовик"): case("6"):
@@ -174,7 +174,7 @@ public class Transports {
                 System.out.println("Количество пассажиров");
                 truck.setPassengerNumber(in.nextInt());
 
-                transportPark.add(truck);
+                TransportPark.add(truck);
                 break;
             case ("Автобус"): case("7"):
                 System.out.println("автобус");
@@ -196,7 +196,7 @@ public class Transports {
                 car.setPassengerNumber(in.nextInt());
 
 
-                transportPark.add(car);
+                TransportPark.add(car);
 
                 break;
 
