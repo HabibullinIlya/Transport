@@ -31,11 +31,13 @@ public abstract class Transport implements IDelivery {
         return Speed;
     }
 
-    public void setSpeed(double speed) {
+    public boolean setSpeed(double speed) {
         if(speed>0){
             Speed = speed;
+            return true;
         }else{
             System.out.println("некорректное значение");
+            return false;
         }
     }
 
@@ -43,11 +45,13 @@ public abstract class Transport implements IDelivery {
         return Payload;
     }
 
-    public void setPayload(double payload) {
+    public boolean setPayload(double payload) {
         if(payload>0){
             Payload = payload;
+            return true;
         }else{
             System.out.println("некорректное значение");
+            return false;
         }
 
     }
@@ -64,11 +68,13 @@ public abstract class Transport implements IDelivery {
         return StuffNumber;
     }
 
-    public void setStuffNumber(int stuffNumber) {
+    public boolean setStuffNumber(int stuffNumber) {
         if(stuffNumber>0){
             StuffNumber = stuffNumber;
+            return true;
         }else{
             System.out.println("некорректное значение");
+            return false;
         }
 
     }
@@ -77,11 +83,13 @@ public abstract class Transport implements IDelivery {
         return PassengerNumber;
     }
 
-    public void setPassengerNumber(int passengerNumber) {
+    public boolean setPassengerNumber(int passengerNumber) {
         if(passengerNumber>0){
             PassengerNumber = passengerNumber;
+            return true;
         }else{
             System.out.println("некорректное значение");
+            return false;
         }
     }
 }
