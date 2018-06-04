@@ -8,7 +8,7 @@ public class Car extends GroundTransportation {
         super();
     }
 
-    protected Car(double Speed, double Payload, String Brand, int StuffNumber, int PassengerNumber) {
+    public Car(double Speed, double Payload, String Brand, int StuffNumber, int PassengerNumber) {
         super(Speed, Payload, Brand, StuffNumber, PassengerNumber);
     }
 

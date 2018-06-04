@@ -52,11 +52,17 @@ public class Transports {
         System.out.println("4.Самолет");
         System.out.println("5.Железнодорожный состав");
         System.out.println("6.Грузовик");
-        System.out.println("7.Автобус");
+        System.out.println("7.Автомобиль");
         System.out.println("Выберете номер типа транспортого средства или введите его тип полностью");
         String userInput = in.nextLine();
 
         //userInput.intern();
+
+        String brand;
+        double speed;
+        double payload;
+        int stuffNumber;
+        int passengerNumber;
 
         switch (userInput) {
             case ("Танкер"):
@@ -64,30 +70,21 @@ public class Transports {
 
                 System.out.println("выбран танкер");
 
-                Tanker tanker = new Tanker();
                 System.out.print("Название: ");
-                tanker.setBrand(in.next());
+                brand = in.nextLine();
 
                 System.out.print("Скорость (км/ч): ");
-                if(!tanker.setSpeed(in.nextDouble())){
-                    return;
-                }
+                speed = in.nextDouble();
 
                 System.out.print("Грузоподъемность (тонн): ");
-                if(!tanker.setPayload(in.nextDouble())){
-                    return;
-                }
-                System.out.print("Количество персонала: ");
-                if(!tanker.setStuffNumber(in.nextInt())){
-                    return;
-                }
+                payload = in.nextDouble();
 
+                System.out.print("Количество персонала: ");
+                stuffNumber = in.nextInt();
 
                 System.out.print("Количество пассажиров: ");
-                if(!tanker.setPassengerNumber(in.nextInt())){
-                    return;
-                }
-
+                passengerNumber = in.nextInt();
+                Tanker tanker = new Tanker(speed,payload,brand,stuffNumber,passengerNumber);
                 TransportPark.add(tanker);
 
                 tanker.showInformation();
@@ -98,29 +95,21 @@ public class Transports {
             case ("2"):
                 System.out.println("выбран лайнер");
 
-                Liner liner = new Liner();
                 System.out.print("Название: ");
-                liner.setBrand(in.next());
+                brand = in.nextLine();
 
                 System.out.print("Скорость (км/ч): ");
-                if(!liner.setSpeed(in.nextDouble())){
-                    return;
-                }
+                speed = in.nextDouble();
 
                 System.out.print("Грузоподъемность (тонн): ");
-                if(!liner.setPayload(in.nextDouble())){
-                    return;
-                }
+                payload = in.nextDouble();
 
                 System.out.print("Количество персонала: ");
-                if(!liner.setStuffNumber(in.nextInt())){
-                    return;
-                }
+                stuffNumber = in.nextInt();
 
                 System.out.print("Количество пассажиров: ");
-                if(!liner.setPassengerNumber(in.nextInt())){
-                    return;
-                }
+                passengerNumber = in.nextInt();
+                Liner liner = new Liner(speed,payload,brand,stuffNumber,passengerNumber);
 
                 TransportPark.add(liner);
 
@@ -128,29 +117,22 @@ public class Transports {
             case ("Вертолет"):
             case ("3"):
                 System.out.println("Выбран вертолет");
-                Helicopter helicopter = new Helicopter();
                 System.out.print("Название: ");
-                helicopter.setBrand(in.next());
+                brand = in.nextLine();
 
                 System.out.print("Скорость (км/ч): ");
-                if(!helicopter.setSpeed(in.nextDouble())){
-                    return;
-                }
+                speed = in.nextDouble();
 
                 System.out.print("Грузоподъемность (тонн): ");
-                if(!helicopter.setPayload(in.nextDouble())){
-                    return;
-                }
+                payload = in.nextDouble();
 
                 System.out.print("Количество персонала: ");
-                if(!helicopter.setStuffNumber(in.nextInt())){
-                    return;
-                }
+                stuffNumber = in.nextInt();
 
                 System.out.print("Количество пассажиров: ");
-                if(!helicopter.setPassengerNumber(in.nextInt())){
-                    return;
-                }
+                passengerNumber = in.nextInt();
+
+                Helicopter helicopter = new Helicopter(speed,payload,brand,stuffNumber,passengerNumber);
 
                 TransportPark.add(helicopter);
                 break;
@@ -158,29 +140,22 @@ public class Transports {
             case ("4"):
                 System.out.println("Выбран самолет");
 
-                Aircraft aircraft = new Aircraft();
                 System.out.print("Название: ");
-                aircraft.setBrand(in.next());
+                brand = in.nextLine();
 
                 System.out.print("Скорость (км/ч): ");
-                if(!aircraft.setSpeed(in.nextDouble())){
-                    return;
-                }
+                speed = in.nextDouble();
 
                 System.out.print("Грузоподъемность (тонн): ");
-                if(!aircraft.setPayload(in.nextDouble())){
-                    return;
-                }
+                payload = in.nextDouble();
 
                 System.out.print("Количество персонала: ");
-                if(!aircraft.setStuffNumber(in.nextInt())){
-                    return;
-                }
+                stuffNumber = in.nextInt();
 
                 System.out.print("Количество пассажиров: ");
-                if(!aircraft.setPassengerNumber(in.nextInt())){
-                    return;
-                }
+                passengerNumber = in.nextInt();
+
+                Aircraft aircraft = new Aircraft(speed,payload,brand,stuffNumber,passengerNumber);
 
                 TransportPark.add(aircraft);
 
@@ -189,29 +164,21 @@ public class Transports {
             case ("5"):
                 System.out.println("Выбран Железнодорожный состав");
 
-                Train train = new Train();
                 System.out.print("Название: ");
+                brand = in.nextLine();
 
-                train.setBrand(in.next());
                 System.out.print("Скорость (км/ч): ");
-                if(!train.setSpeed(in.nextDouble())){
-                    return;
-                }
+                speed = in.nextDouble();
 
                 System.out.print("Грузоподъемность (тонн): ");
-                if(!train.setPayload(in.nextDouble())){
-                    return;
-                }
+                payload = in.nextDouble();
 
                 System.out.print("Количество персонала: ");
-                if(!train.setStuffNumber(in.nextInt())){
-                    return;
-                }
+                stuffNumber = in.nextInt();
 
                 System.out.print("Количество пассажиров: ");
-                if(!train.setPassengerNumber(in.nextInt())){
-                    return;
-                }
+                passengerNumber = in.nextInt();
+                Train train = new Train(speed,payload,brand,stuffNumber,passengerNumber);
 
                 TransportPark.add(train);
 
@@ -219,62 +186,44 @@ public class Transports {
             case ("Грузовик"):
             case ("6"):
                 System.out.println("грузовик");
-                Truck truck = new Truck();
-
                 System.out.print("Название: ");
-                truck.setBrand(in.next());
+                brand = in.nextLine();
 
                 System.out.print("Скорость (км/ч): ");
-                if(!truck.setSpeed(in.nextDouble())){
-                    return;
-                }
+                speed = in.nextDouble();
 
                 System.out.print("Грузоподъемность (тонн): ");
-                if(!truck.setPayload(in.nextDouble())){
-                    return;
-                }
+                payload = in.nextDouble();
 
                 System.out.print("Количество персонала: ");
-                if(!truck.setStuffNumber(in.nextInt())){
-                    return;
-                }
+                stuffNumber = in.nextInt();
 
                 System.out.print("Количество пассажиров: ");
-                if(!truck.setPassengerNumber(in.nextInt())){
-                    return;
-                }
+                passengerNumber = in.nextInt();
+
+                Truck truck = new Truck(speed,payload,brand,stuffNumber,passengerNumber);
 
                 TransportPark.add(truck);
                 break;
-            case ("Автобус"):
+            case ("Автомобиль"):
             case ("7"):
-                System.out.println("автобус");
-                Car car = new Car();
-
+                System.out.println("автомобиль");
                 System.out.print("Название: ");
-                car.setBrand(in.next());
+                brand = in.nextLine();
 
                 System.out.print("Скорость (км/ч): ");
-                if(!car.setSpeed(in.nextDouble())){
-                    return;
-                }
+                speed = in.nextDouble();
 
                 System.out.print("Грузоподъемность (тонн): ");
-                if(!car.setPayload(in.nextDouble())){
-                    return;
-                }
+                payload = in.nextDouble();
 
                 System.out.print("Количество персонала: ");
-                if(!car.setStuffNumber(in.nextInt())){
-                    return;
-                }
+                stuffNumber = in.nextInt();
 
                 System.out.print("Количество пассажиров: ");
-                if(!car.setPassengerNumber(in.nextInt())){
-                    return;
-                }
+                passengerNumber = in.nextInt();
 
-
+                Car car = new Car(speed,payload,brand,stuffNumber,passengerNumber);
                 TransportPark.add(car);
 
                 break;
