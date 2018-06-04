@@ -32,7 +32,11 @@ public abstract class Transport implements IDelivery {
     }
 
     public void setSpeed(double speed) {
-        Speed = speed;
+        if(speed>0){
+            Speed = speed;
+        }else{
+            System.out.println("некорректное значение");
+        }
     }
 
     public double getPayload() {
@@ -40,7 +44,12 @@ public abstract class Transport implements IDelivery {
     }
 
     public void setPayload(double payload) {
-        Payload = payload;
+        if(payload>0){
+            Payload = payload;
+        }else{
+            System.out.println("некорректное значение");
+        }
+
     }
 
     public String getBrand() {
@@ -56,7 +65,12 @@ public abstract class Transport implements IDelivery {
     }
 
     public void setStuffNumber(int stuffNumber) {
-        StuffNumber = stuffNumber;
+        if(stuffNumber>0){
+            StuffNumber = stuffNumber;
+        }else{
+            System.out.println("некорректное значение");
+        }
+
     }
 
     public int getPassengerNumber() {
@@ -64,6 +78,10 @@ public abstract class Transport implements IDelivery {
     }
 
     public void setPassengerNumber(int passengerNumber) {
-        PassengerNumber = passengerNumber;
+        if(passengerNumber>0){
+            PassengerNumber = passengerNumber;
+        }else{
+            System.out.println("некорректное значение");
+        }
     }
 }
