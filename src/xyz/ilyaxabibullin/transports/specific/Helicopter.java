@@ -4,11 +4,12 @@ import xyz.ilyaxabibullin.transports.base.AirTransportation;
 import xyz.ilyaxabibullin.transports.base.IDelivery;
 
 public class Helicopter extends AirTransportation implements IDelivery {
-    public Helicopter(){
+    public Helicopter() {
         super();
     }
-    public Helicopter(double Speed, double Payload, String Brand, int StuffNumber, int PassengerNumber){
-        super(Speed,Payload,Brand,StuffNumber,PassengerNumber);
+
+    public Helicopter(double Speed, double Payload, String Brand, int StuffNumber, int PassengerNumber) {
+        super(Speed, Payload, Brand, StuffNumber, PassengerNumber);
     }
 
     @Override

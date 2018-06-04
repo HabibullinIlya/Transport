@@ -20,8 +20,8 @@ public abstract class Transport implements IDelivery {
 
     public void showInformation(){
         System.out.println("Марка "+ getBrand());
-        System.out.println("Грузоподъемность "+ getPayload());
-        System.out.println("Скорость  "+ getSpeed());
+        System.out.println("Грузоподъемность "+ getPayload()+ " тонн");
+        System.out.println("Скорость  "+ getSpeed()+" (км/ч)");
         System.out.println("Количество персонала  "+ getStuffNumber());
         System.out.println("Количество пассажиров  "+ getPassengerNumber());
     }

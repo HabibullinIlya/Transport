@@ -4,7 +4,7 @@ import xyz.ilyaxabibullin.transports.base.IDelivery;
 import xyz.ilyaxabibullin.transports.base.WaterTransport;
 
 public class Liner extends WaterTransport implements IDelivery {
-    public Liner(){
+    public Liner() {
         super();
     }
 
@@ -19,7 +19,7 @@ public class Liner extends WaterTransport implements IDelivery {
     }
 
     @Override
-    public void showInformation(){
+    public void showInformation() {
         System.out.println("Лайнер");
         super.showInformation();
     }
